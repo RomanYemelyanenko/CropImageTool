@@ -1,0 +1,20 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RGBFilters", "RGBFilters\RGBFilters.csproj", "{75D4D892-D741-4E21-A6FB-10D6D2A8DCCD}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{75D4D892-D741-4E21-A6FB-10D6D2A8DCCD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{75D4D892-D741-4E21-A6FB-10D6D2A8DCCD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{75D4D892-D741-4E21-A6FB-10D6D2A8DCCD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{75D4D892-D741-4E21-A6FB-10D6D2A8DCCD}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(MonoDevelopProperties) = preSolution
+		StartupItem = RGBFilters\RGBFilters.csproj
+	EndGlobalSection
+EndGlobal
