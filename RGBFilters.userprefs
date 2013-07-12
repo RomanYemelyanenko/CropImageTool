@@ -1,9 +1,10 @@
 ﻿<Properties>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="RGBFilters/MainActivity.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="RGBFilters/FilterImageView.cs">
     <Files>
-      <File FileName="RGBFilters/CropImageView.cs" Line="26" Column="33" />
-      <File FileName="RGBFilters/MainActivity.cs" Line="36" Column="4" />
+      <File FileName="RGBFilters/Layouts/MainLayout.cs" Line="56" Column="22" />
+      <File FileName="RGBFilters/MainActivity.cs" Line="27" Column="30" />
+      <File FileName="RGBFilters/FilterImageView.cs" Line="42" Column="23" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

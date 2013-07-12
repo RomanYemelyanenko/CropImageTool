@@ -45,55 +45,13 @@ namespace RGBFilters
 		{
 			
 			// aapt resource value: 0x7f020000
-			public const int bg = 2130837504;
+			public const int Icon = 2130837504;
 			
 			// aapt resource value: 0x7f020001
-			public const int btn_cancel = 2130837505;
+			public const int image_for_cropping = 2130837505;
 			
 			// aapt resource value: 0x7f020002
-			public const int btn_cancel_pressed = 2130837506;
-			
-			// aapt resource value: 0x7f020003
-			public const int btn_done = 2130837507;
-			
-			// aapt resource value: 0x7f020004
-			public const int btn_done_pressed = 2130837508;
-			
-			// aapt resource value: 0x7f020005
-			public const int cat = 2130837509;
-			
-			// aapt resource value: 0x7f020006
-			public const int crop_circle = 2130837510;
-			
-			// aapt resource value: 0x7f020007
-			public const int Icon = 2130837511;
-			
-			// aapt resource value: 0x7f020008
-			public const int icon_2_3 = 2130837512;
-			
-			// aapt resource value: 0x7f020009
-			public const int icon_3_4 = 2130837513;
-			
-			// aapt resource value: 0x7f02000a
-			public const int icon_3_5 = 2130837514;
-			
-			// aapt resource value: 0x7f02000b
-			public const int icon_crop = 2130837515;
-			
-			// aapt resource value: 0x7f02000c
-			public const int icon_custom = 2130837516;
-			
-			// aapt resource value: 0x7f02000d
-			public const int icon_original = 2130837517;
-			
-			// aapt resource value: 0x7f02000e
-			public const int icon_square = 2130837518;
-			
-			// aapt resource value: 0x7f02000f
-			public const int image_for_cropping = 2130837519;
-			
-			// aapt resource value: 0x7f020010
-			public const int monoandroidsplash = 2130837520;
+			public const int monoandroidsplash = 2130837506;
 			
 			static Drawable()
 			{
@@ -117,14 +75,14 @@ namespace RGBFilters
 			// aapt resource value: 0x7f060001
 			public const int greenSeek = 2131099649;
 			
+			// aapt resource value: 0x7f060005
+			public const int imageView = 2131099653;
+			
 			// aapt resource value: 0x7f060004
 			public const int info = 2131099652;
 			
 			// aapt resource value: 0x7f060000
 			public const int redSeek = 2131099648;
-			
-			// aapt resource value: 0x7f060005
-			public const int surfaceView1 = 2131099653;
 			
 			static Id()
 			{

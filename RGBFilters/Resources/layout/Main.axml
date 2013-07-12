@@ -25,8 +25,8 @@
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:id="@+id/info" />
-    <SurfaceView
+    <View
         android:layout_width="fill_parent"
-        android:layout_height="match_parent"
-        android:id="@+id/surfaceView1" />
+        android:layout_height="wrap_content"
+        android:id="@+id/imageView" />
 </LinearLayout>

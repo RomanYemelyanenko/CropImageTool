@@ -1,2 +1,3 @@
 RGBFilters.RGBfilters;rgbfilters.RGBfilters
-RGBFilters.CropImageView;rgbfilters.CropImageView
+RGBFilters.FilterImageView;rgbfilters.FilterImageView
+RGBFilters.MainLayout;rgbfilters.MainLayout

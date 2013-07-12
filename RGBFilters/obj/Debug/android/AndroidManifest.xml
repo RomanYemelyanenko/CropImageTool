@@ -10,7 +10,7 @@
         <category android:name="mono.android.intent.category.SEPPUKU.RGBFilters.RGBFilters" />
       </intent-filter>
     </receiver>
-    <activity android:label="RGBFilters" android:name="rgbfilters.rgbfilters.TrialSplashScreen80c419a9d8c445118c634dd1a6b7a2e3" android:theme="@style/Mono.Android.Theme.Splash" android:noHistory="true">
+    <activity android:label="RGBFilters" android:name="rgbfilters.rgbfilters.TrialSplashScreen3a3c8d8361fa49d0b4df61ecb4d83bb5" android:theme="@style/Mono.Android.Theme.Splash" android:noHistory="true">
       <intent-filter>
         <action android:name="android.intent.action.MAIN" />
         <category android:name="android.intent.category.LAUNCHER" />

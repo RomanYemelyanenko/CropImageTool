@@ -1,9 +1,5 @@
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="251pt" android:layout_height="440pt"
-    android:orientation="vertical">
-      <!--
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="251pt" android:layout_height="440pt" android:orientation="vertical"><!--
     <TextView
         android:layout_width="fill_parent" android:layout_height="wrap_content"
-		android:text="Xamarin Android trial mode, expires on 2013/07/12 17:14." />
-		-->
-</LinearLayout>
+		android:text="Xamarin Android trial mode, expires on 2013/07/13 14:59." />
+		--></LinearLayout>
