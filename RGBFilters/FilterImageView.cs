@@ -27,13 +27,18 @@ namespace RGBFilters
 
 		public void SetBitmap(Bitmap image)
 		{
+			if (_image != null)
+				_image.Recycle ();
+
 			_image = image;
 			_paint = new Paint ();
+			Invalidate ();
 		}
 
 		public void SetFilter(ColorMatrix filter)//float red, float green, float blue, float alpha)
 		{
 			_filter = filter;
+			Invalidate ();
 		}
 
 		protected override void OnDraw (Canvas canvas)

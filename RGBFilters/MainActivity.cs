@@ -15,6 +15,9 @@ namespace RGBFilters
 	[Activity (Label = "RGBFilters", MainLauncher = true)]
 	public class RGBfilters : Activity
 	{
+		public const string ImageSrcId = "ImageSrcId";
+		public const string ImageUri = "ImageUri";
+
 		private const int PickImageRequestCode = 0x0100;
 		private const int EditActivityStartRequestCode = 0x0100;
 
@@ -46,8 +49,16 @@ namespace RGBFilters
 
 		private void LoadImage(object sender, EventArgs e)
 		{
-			Intent intent = new Intent (Intent.ActionPick, MediaStore.Images.Media.ExternalContentUri);
-			StartActivityForResult (intent, PickImageRequestCode);
+			try
+			{
+				Intent intent = new Intent (Intent.ActionPick, MediaStore.Images.Media.ExternalContentUri);
+				StartActivityForResult (intent, PickImageRequestCode);
+			}
+			catch (Exception ex)
+			{
+				Log.Debug ("Load msg", ex.Message);
+				Log.Debug ("Load msg", ex.InnerException.ToString());
+			}
 		}
 
 		protected override void OnActivityResult (int requestCode, Result resultCode, Intent data)
@@ -55,12 +66,38 @@ namespace RGBFilters
 			base.OnActivityResult (requestCode, resultCode, data);
 
 			if (requestCode == PickImageRequestCode && resultCode == Result.Ok && data != null) {
-				var imageUri = data.DataString;
-				Bitmap bitmap = BitmapFactory.DecodeStream(BaseContext.OpenFileInput(imageUri));
-				_mainLayout.ImageView.SetBitmap (bitmap);
+				try
+				{
+
+					SetImageFromGallery (Android.Net.Uri.Parse(data.DataString));
+				}
+				catch(Exception ex) {
+					Log.Debug ("Load msg", ex.Message);
+					Log.Debug ("Load msg", ex.InnerException.ToString());
+				}
 			}
-			else if(requestCode == PickImageRequestCode && resultCode == Result.Canceled && data != null){
-				Toast.MakeText(this, data.Action, ToastLength.Long).Show();
+		}
+
+		private void SetImageFromGallery (Android.Net.Uri imageUri)
+		{
+			try
+			{
+				var options = new BitmapFactory.Options();
+				using (var inputStream = ContentResolver.OpenInputStream(imageUri)) {
+					options.InJustDecodeBounds = true;
+					BitmapFactory.DecodeStream(inputStream, null, options);
+				}
+
+				if(((options.OutWidth * options.OutHeight * 4) >> 20) < ((ActivityManager)GetSystemService(ActivityService)).MemoryClass / 2) {
+					using (var inputStream = ContentResolver.OpenInputStream(imageUri))
+						_mainLayout.ImageView.SetBitmap(BitmapFactory.DecodeStream(inputStream));
+				} else {
+					SetResult(Result.Canceled, new Intent("Image is too big for being edited by this application ^_^"));
+					Finish ();
+				}
+			} catch (System.Exception exception){
+				SetResult(Result.Canceled, new Intent(string.Format("Exception has been thrown during Bitmap decoding exception message: {0}", exception.StackTrace)));
+				Finish ();
 			}
 		}
 
@@ -77,8 +114,6 @@ namespace RGBFilters
 			_mainLayout.ImageView.SetFilter (filter);
 
 			_mainLayout.TextView.Text = "R: " + scailR + " | G: " + scailG + " | B : " + scailB + " | A: " + scailA;
-			_mainLayout.ImageView.Invalidate ();
-
 		}
 
 	}

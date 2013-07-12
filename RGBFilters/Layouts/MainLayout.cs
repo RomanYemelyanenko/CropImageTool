@@ -20,9 +20,6 @@ namespace RGBFilters
 
 		public MainLayout (Context context) : base(context)
 		{
-
-
-
 			Orientation = Orientation.Vertical;
 			LayoutParameters = new LinearLayout.LayoutParams (LayoutHelper.MatchParent, LayoutHelper.MatchParent);
 			SetGravity (GravityFlags.CenterHorizontal); //GravityFlags.CenterHorizontal);
